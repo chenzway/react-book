@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import CommentApp from './CommentApp/CommentApp';
+import ThemeApp from './themeApp/Index';
 /* 
 class Header extends Component {
   componentDidMount() {
@@ -81,4 +82,4 @@ class App extends Component {
   }
 } */
 
-ReactDOM.render(<CommentApp />, document.getElementById('root'));
+ReactDOM.render(<ThemeApp />, document.getElementById('root'));

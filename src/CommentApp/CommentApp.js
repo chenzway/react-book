@@ -6,6 +6,10 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 class CommentApp extends Component {
+  static childContextTypes = {
+    themeColor: PropTypes.string
+  };
+
   static propTypes = {
     data: PropTypes.any,
     saveData: PropTypes.func.isRequired
@@ -15,6 +19,12 @@ class CommentApp extends Component {
     super(props);
     this.state = {
       comments: this.props.data || []
+    };
+  }
+
+  getChildContext() {
+    return {
+      themeColor: 'red'
     };
   }
 
@@ -53,7 +63,7 @@ class CommentApp extends Component {
   render() {
     return (
       <div className='wrapper'>
-        <CommentInput onSubmit={this.handleonSubmitComment} ></CommentInput>
+        <CommentInput onSubmit={this.handleonSubmitComment}></CommentInput>
         <CommentList comments={this.state.comments} onDeleteComment={this.handleDeleteComment}></CommentList>
       </div>
     );

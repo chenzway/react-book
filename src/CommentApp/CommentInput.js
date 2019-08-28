@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import LocalStorageActions from './LocalStorageActions';
+import PropTypes from 'prop-types';
 
 class CommentInput extends Component {
+  static contextTypes = {
+    themeColor: PropTypes.string
+  }
+
   // 初始化状态 用户名与评论内容
   constructor(props) {
     super(props);
     this.state = {
-      username: this.props.data,
+      username: this.props.data || '',
       comment: ''
     };
   }
+  
 
   /* componentWillMount() {
     this.setState({
@@ -58,7 +64,7 @@ class CommentInput extends Component {
       <div>
         <div className='comment-input'>
           <div className='comment-filed'>
-            <span className='comment-filed-name'>用户名：</span>
+            <span className='comment-filed-name' style={{ color: this.context.themeColor }}>用户名：</span>
             {/* 添加 input 事件， 注意传入参数 e */}
             <input value={this.state.username} onChange={e => this.handleUsername(e)} onBlur={e => this.handleUsernameBlur(e)} />
           </div>
