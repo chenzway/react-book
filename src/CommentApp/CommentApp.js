@@ -1,3 +1,4 @@
+// 导入 react 与相关组件
 import React, { Component } from 'react';
 import CommentInput from './CommentInput';
 import CommentList from './CommentList';
@@ -6,10 +7,12 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 class CommentApp extends Component {
+  // 声明与校验 context
   static childContextTypes = {
     themeColor: PropTypes.string
   };
 
+  // 校验 propsTypes
   static propTypes = {
     data: PropTypes.any,
     saveData: PropTypes.func.isRequired
@@ -22,6 +25,7 @@ class CommentApp extends Component {
     };
   }
 
+  // 设置 context
   getChildContext() {
     return {
       themeColor: 'red'
