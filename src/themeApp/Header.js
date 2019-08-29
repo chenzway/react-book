@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from './MyRedux';
+// import { connect } from './MyRedux';
+import { connect } from 'react-redux'
 
 class Header extends Component {
   constructor(props) {

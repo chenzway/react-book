@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Content from './Content';
-import { Provider } from './MyRedux';
+// import { Provider } from './MyRedux';
 
-function createStore(reducer) {
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+/* function createStore(reducer) {
   let state = null;
   let listeners = [];
   const subscribe = listener => listeners.push(listener);
@@ -14,7 +17,7 @@ function createStore(reducer) {
   };
   dispatch({});
   return { getState, dispatch, subscribe };
-}
+} */
 
 const themeReducer = (state, action) => {
   if (!state) return { themeColor: 'red' };

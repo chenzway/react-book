@@ -12,6 +12,7 @@ export default (WrappedComponent, name) => {
       try {
         this.setState({ data: JSON.parse(data) });
       } catch {
+        console.log(112)
         this.setState({ data });
       }
     }

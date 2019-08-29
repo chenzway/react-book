@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import CommentApp from './CommentApp/CommentApp';
-import ThemeApp from './themeApp/Index';
+// import CommentApp from './CommentApp/CommentApp';
+import CommentApp from './CommentAppRedux/CommentApp';
+// import ThemeApp from './themeApp/Index';
 /* 
 class Header extends Component {
   componentDidMount() {
@@ -40,7 +40,7 @@ class App extends Component {
     console.log('construct');
   }
 
-  componentWillMount() {
+  _componentWillMount() {
     this.timer = setInterval(() => {
       this.setState({
         date: new Date()
@@ -82,4 +82,4 @@ class App extends Component {
   }
 } */
 
-ReactDOM.render(<ThemeApp />, document.getElementById('root'));
+ReactDOM.render(<CommentApp />, document.getElementById('root'));

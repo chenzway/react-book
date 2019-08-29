@@ -14,7 +14,7 @@ export const connect = (mapStateToProps, mapDispatchToProps) => WrappedComponent
       };
     }
 
-    componentWillMount() {
+    __componentWillMount() {
       const { store } = this.context;
       this._updateProps();
       store.subscribe(() => this._updateProps());

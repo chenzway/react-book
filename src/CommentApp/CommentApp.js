@@ -28,7 +28,7 @@ class CommentApp extends Component {
     };
   }
 
-  /* componentWillMount() {
+  /* _componentWillMount() {
     this._loadComments();
   }
 

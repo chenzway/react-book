@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from './MyRedux';
+// import { connect } from './MyRedux';
+import { connect } from 'react-redux'
 
 class ThemeSwitch extends PureComponent {
   constructor(props) {
